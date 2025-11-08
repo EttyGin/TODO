@@ -57,6 +57,15 @@ cd C:\Users\1\TODOLIST
 .\run-all.ps1
 ```
 
+If you prefer to run both together on Mac/Linux, there is also a bash script named `start-all.sh` in the project root that attempts to open new terminal windows on macOS and Linux and run the backend and frontend. Example usage:
+
+```bash
+cd /path/to/TODOLIST
+./start-all.sh
+```
+
+Note: The script tries to use `Terminal.app` on macOS and several common terminals on Linux (gnome-terminal, konsole, x-terminal-emulator). If no suitable terminal is found, it will run the processes in the background in the same terminal.
+
 Notes & troubleshooting
 
 - If you get CORS errors in the browser, enable CORS in the backend (see `backend/README.md` for a small snippet).
