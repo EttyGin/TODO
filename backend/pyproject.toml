@@ -10,5 +10,5 @@ dependencies = [
     "psycopg2-binary",
     "python-dotenv",
     "alembic",
-    "pydantic"
+    "pydantic",
 ]

@@ -1,10 +1,6 @@
-
 """
-Configuration module.
-Loads environment variables and provides global application settings.
+core/config.py
 """
-
-
 import os
 from dotenv import load_dotenv
 
