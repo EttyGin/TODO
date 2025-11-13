@@ -6,8 +6,8 @@ Defines all endpoints related to Todo management.
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from core.db import get_db
-from schemas.todo import TodoSchema
-from services.todo_service import TodoService
+from schemas import TodoSchema
+from services import TodoService
 
 router = APIRouter(prefix="/todos", tags=["todos"])
 

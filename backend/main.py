@@ -1,9 +1,8 @@
 from fastapi import FastAPI
-from routers import todo_router
-
+from routers import router
 app = FastAPI(title="Todo API")
 
-app.include_router(todo_router.router)
+app.include_router(router)
 
 if __name__ == "__main__":
     import uvicorn

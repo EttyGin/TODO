@@ -4,8 +4,8 @@ Handles database operations (CRUD) for Todo items.
 """
 
 from sqlalchemy.orm import Session
-from models.todo import Todo
-from schemas.todo import TodoSchema
+from models import Todo
+from schemas import TodoSchema
 
 
 class TodoRepository:
