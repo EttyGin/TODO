@@ -1,23 +1,26 @@
 from fastapi import FastAPI
-from routers import router
-
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+from routers import router
+import uvicorn
 
-# הוסף CORS
+
+app = FastAPI(title="Todo API")
+
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # בפיתוח - מאפשר הכל
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app = FastAPI(title="Todo API")
-
 app.include_router(router)
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
